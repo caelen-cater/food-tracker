@@ -1,1 +1,0 @@
-Put your FDA API key in here. You can get one from https://open.fda.gov/apis/authentication/
