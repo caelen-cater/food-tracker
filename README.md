@@ -24,7 +24,7 @@ Follow these steps to set up and use the Food Tracker:
 
 ## Obtaining FDA API Key
 
-To obtain an FDA API key, visit [FDA API Developer Portal]((https://open.fda.gov/apis/authentication/) and follow the registration process.
+To obtain an FDA API key, visit [FDA API Developer Portal](https://open.fda.gov/apis/authentication/) and follow the registration process.
 Then put the API key in ~/api/upc/index.php
 
 ## Contributing
