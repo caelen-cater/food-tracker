@@ -1,8 +1,6 @@
 <?php
 function getApiData($upc) {
-    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
-    $domain = "$protocol://$_SERVER[HTTP_HOST]";
-    $apiKey = trim(file_get_contents($domain . "/api/values/fdakey.txt"));
+    $apiKey = "YOUR API KEY HERE";
 
     $upcApiUrl = "https://api.upcitemdb.com/prod/trial/lookup?upc=" . $upc;
     $upcResponse = file_get_contents($upcApiUrl);
