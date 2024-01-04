@@ -17,7 +17,7 @@ Follow these steps to set up and use the Food Tracker:
 3. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/FoodTracker.git
+   git clone https://github.com/caelen-cater/food-tracker.git
    ```
 
 2. Navigate to the install and open it in a browser
