@@ -1,0 +1,3 @@
+script=script.php_api_key
+read=read.php_api_key
+fda=WYNFR1AFXFUGh684FZWakn41WDSKX4gJsM3CyQys
