@@ -1,7 +1,7 @@
 <?php
 $keys = include($_SERVER['DOCUMENT_ROOT'] . '/keys.php');
 
-if (!isset($_GET['apikey']) || $_GET['apikey'] !== $keys['script']) {
+if (!isset($_REQUEST['apiKey']) || $_REQUEST['apiKey'] !== $keys['script']) {
     echo json_encode(['error' => 'Invalid API key']);
     exit;
 }
@@ -48,7 +48,7 @@ function processUPC($upc, $userId = 0) {
         \$logData = [\$entryData];
         \$encryptedLogData = base64_encode(openssl_encrypt(json_encode(\$logData), 'AES-256-CBC', \$encryption_key, 0, substr(\$encryption_key, 0, 16)));
         file_put_contents(\$logFilePath, \$encryptedLogData);
-        echo json_encode(['success' => 'Log created successfully']);
+        echo json_encode(['success' => 'Log created successfully']); // Added this line
         ?>";
         file_put_contents($userScriptPath, $defaultScript);
     }
@@ -60,8 +60,8 @@ function processUPC($upc, $userId = 0) {
     return $userScriptData;
 }
 
-$upc = $_GET['upc'];
-$userId = isset($_GET['userId']) ? $_GET['userId'] : 0;
+$upc = $_REQUEST['upc'];
+$userId = isset($_REQUEST['userId']) ? $_REQUEST['userId'] : 0;
 $data = processUPC($upc, $userId);
 echo json_encode($data);
 ?>
